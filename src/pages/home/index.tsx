@@ -25,6 +25,9 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
+  ContainerFlex,
+  ContainerAbout,
+  InnerContainerAbout
 } from "./style";
 
 export const Home = (): JSX.Element => {
@@ -44,28 +47,25 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
+              <Text color="grey4">Olá, meu nome é {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            I{" "}
+            {" "}
               <Text as="span" type="heading1" color="brand1">
-                love
+                Criação
               </Text>{" "}
-              creating and{" "}
+              e{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                desenvolvimento
               </Text>{" "}
-              projects
+              de projetos
             </Text>
             <Text type="body1" color="grey2">
-              Here you will find some of my projects and technologies that i master
+              Aqui você vai envontrar os projetos e algumas tecnologias que domino.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
-              </Button>
-              <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+                Ver Projetos
               </Button>
               <Button
                 color="grey5"
@@ -86,17 +86,35 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
+      <ContainerFlex id="about-me">
+        <ContainerAbout>
+              <InnerContainerAbout>
+                  <Text as="h1" type="heading3" color="grey4">Sobre Mim:</Text>
+                  <Text as="p" type="body1" color="grey2">
+                      Trabalhei inicialmente como aprendiz no setor de compras, onde pude perceber a necessidade de abastecimento de estoque da empresa e como isso influencia diretamente em seu bom funcionamento, bem como no lançamento atividades para os colaboradores. 
+                  </Text>
+                  
+                  <Text as="p" type="body1" color="grey2">
+                      Posteriormente como estagiário na Controladoria Financeira, pude ter uma ideia a respeito da criação e controle de projetos, por meio da gestão de recursos, criação e remanejamento de orçamentos, relatórios financeiros e de prestação de contas. 
+                  </Text>
+
+                  <Text as="p" type="body1" color="grey2">
+                      Passando por um processo de transição de carreira, levando em consideração as mudanças contínuas no mundo e a evolução da tecnologia, estudo programação Full Stack Front-End e Back-End na Kenzie Academy. 
+                  </Text>
+              </InnerContainerAbout>
+        </ContainerAbout>
+      </ContainerFlex>
       <ProjectsArea id="projects">
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
-                My projects
+                Meus projetos
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
+                Alguns dos meus{" "}
                 <Text as="span" color="brand5">
-                  side projects
+                  projetos:
                 </Text>
               </Text>
             </ProjectsAreaSocialMediaMessage>

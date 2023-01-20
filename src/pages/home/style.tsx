@@ -1,9 +1,6 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
-import { css } from "@stitches/react";
-
-import meIlustration from "@/public/static/img/background/me-ilustration.svg";
 import backgroundImg from "@/public/static/img/background/header-bg.svg";
 
 import dots from "@/public/static/img/background/dots.svg";
@@ -144,3 +141,28 @@ export const ProjectAreaWrapperColumns = styled("div", {
     flexDirection: "column",
   },
 });
+
+export const ContainerFlex = styled("section", {
+  width: "100%",
+  minHeight: "500px",
+  backgroundColor: "$grey1",
+  borderBottom: "2px solid white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+})
+
+export const ContainerAbout = styled("div", {
+  width: "100%",
+  minHeight: "300px",
+  backgroundColor: "$grey1",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+})
+
+export const InnerContainerAbout = styled("div",  {
+  maxWidth: "83%",
+})
+
+
